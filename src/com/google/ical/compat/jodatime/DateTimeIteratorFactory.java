@@ -126,7 +126,7 @@ public class DateTimeIteratorFactory {
         }
     }
 
-    static DateTime dateValueToDateTime(DateValue dvUtc) {
+    public static DateTime dateValueToDateTime(DateValue dvUtc) {
         if (dvUtc instanceof TimeValue) {
             TimeValue tvUtc = (TimeValue)dvUtc;
             return new DateTime(dvUtc.year(), dvUtc.month(), // java.util's
@@ -141,7 +141,7 @@ public class DateTimeIteratorFactory {
         }
     }
 
-    static DateValue dateTimeToDateValue(ReadableDateTime dt) {
+    public static DateValue dateTimeToDateValue(ReadableDateTime dt) {
         return new DateTimeValueImpl(dt.getYear(), dt.getMonthOfYear(), dt.getDayOfMonth(), dt.getHourOfDay(), dt.getMinuteOfHour(), dt.getSecondOfMinute());
     }
 

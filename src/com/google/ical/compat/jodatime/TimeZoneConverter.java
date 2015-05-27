@@ -38,7 +38,7 @@ import org.joda.time.DateTimeZone;
  *
  * @author mikesamuel+svn@gmail.com (Mike Samuel)
  */
-final class TimeZoneConverter {
+public final class TimeZoneConverter {
 
   static final int MILLISECONDS_PER_SECOND = 1000;
   static final int MILLISECONDS_PER_MINUTE = 60 * MILLISECONDS_PER_SECOND;
