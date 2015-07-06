@@ -61,4 +61,26 @@ public class Recurrence {
 
         return value;
     }
+    
+    public String toIcal()
+    {
+        StringBuilder sb = new StringBuilder();
+        for (RRule rule : inclusionRules)
+        {
+            sb.append(rule.toIcal()).append("\r\n");
+        }
+        for (RDateList list : inclusionDates)
+        {
+            sb.append(list.toIcal()).append("\r\n");
+        }
+        for (RRule rule : exclusionRules)
+        {
+            sb.append(rule.toIcal()).append("\r\n");
+        }
+        for (RDateList list : exclusionDates)
+        {
+            sb.append(list.toIcal()).append("\r\n");
+        }
+        return sb.toString();
+    }
 }
